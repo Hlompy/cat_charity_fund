@@ -9,6 +9,7 @@ from sqlalchemy.ext.asyncio import AsyncEngine
 
 from alembic import context
 
+# Импортируем базовый класс Base.
 from app.core.base import Base
 
 load_dotenv('.env')
@@ -26,8 +27,8 @@ if config.config_file_name is not None:
 
 # add your model's MetaData object here
 # for 'autogenerate' support
-# from myapp import mymodel
-# target_metadata = mymodel.Base.metadata
+
+# Присвоим переменной target_metadata объект класса MetaData из Base.
 target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,

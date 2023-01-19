@@ -18,6 +18,7 @@ router = APIRouter()
     '/',
     response_model=DonationMy,
     response_model_exclude_none=True,
+    dependencies=[Depends(current_user)],
 )
 async def create_donation(
     donation: DonationCreate,
