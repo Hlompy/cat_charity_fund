@@ -10,7 +10,7 @@ from app.api.validators import (check_name_duplicate, check_project_active,
 from app.core.db import get_async_session
 from app.core.user import current_superuser
 from app.crud.charity_project import project_crud
-from app.models import Donation
+from app.models.donation import Donation
 from app.schemas.charity_project import (CharityProjectCreate,
                                          CharityProjectDB,
                                          CharityProjectUpdate)
